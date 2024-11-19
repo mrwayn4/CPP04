@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:03 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/15 12:03:29 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/19 20:59:19 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,17 @@ int	ft_isalpha(std::string s)
 	return (0);
 }
 
+int	s_to_i(std::string s)
+{
+	int n = 10;
+	if (s[0])
+		n = s[0] - '0';
+	if (s[1])
+		n += s[1] - '0';
+	return (n);
+
+}
+
 int	ft_isdigit(std::string c)
 {
 	int i = 0;
@@ -73,7 +84,7 @@ void	PhoneBook::add()
 	std::string s;
 
 	s = "";
-	while (s == "" || ft_isprint(s) || ft_isdigit(s))
+	while (s == "" || ft_isprint(s))
 	{
 		std::cout << "First name: ";
 		std::getline(std::cin, s);
@@ -82,7 +93,7 @@ void	PhoneBook::add()
 	}
 	arr[index].set_fname(s);
 	s = "";
-	while (s == "" || ft_isprint(s) || ft_isdigit(s))
+	while (s == "" || ft_isprint(s))
 	{
 		std::cout << "Last name: ";
 		std::getline(std::cin, s);
@@ -91,7 +102,7 @@ void	PhoneBook::add()
 	}
 	arr[index].set_lname(s);
 	s = "";
-	while (s == "" || ft_isprint(s) || ft_isdigit(s))
+	while (s == "" || ft_isprint(s))
 	{
 		std::cout << "Nick name: ";
 		std::getline(std::cin, s);
@@ -120,6 +131,59 @@ void	PhoneBook::add()
 	index++;
 	if (size < 8)
 		size++;
+	if (size == 8)
+		std::cout << "You have reached the maximum number of contacts." << std::endl;
 	if (index == 8)
 		index = 0;
+}
+
+std::string truncat_txt(std::string s)
+{
+	if (s.size() > 10)
+	{
+		s.resize(9);
+		s += '.';
+	}
+	return (s);
+}
+
+void	PhoneBook::search()
+{
+	int	i = 0;
+	std::cout << " ------------------------------------------- " << std::endl;
+	std::cout << "|" << std::setw(10) << "Index";
+	std::cout << "|" << std::setw(10) << "First Name";
+	std::cout << "|" << std::setw(10) << "Last name";
+	std::cout << "|" << std::setw(10) << "Nick name";
+	std::cout << "|" << std::endl;
+	std::cout << " ------------------------------------------- " << std::endl;
+	while (i < size)
+	{
+		std::cout << "|" << std::setw(10) << i;
+		std::cout << "|" << std::setw(10) << truncat_txt(arr[i].get_fname());
+		std::cout << "|" << std::setw(10) << truncat_txt(arr[i].get_lname());
+		std::cout << "|" << std::setw(10) << truncat_txt(arr[i].get_nname());
+		std::cout << "|";
+		std::cout << std::endl;
+		std::cout << " ------------------------------------------- " << std::endl;
+		i++;
+	}
+	std::string id;
+	int idex = s_to_i(id);
+	while (true)
+	{
+		std::cout << "Select Index: ";
+		std::getline(std::cin, id);
+		if (std::cin.eof())
+			return ;
+		if (!id.empty() && idex <= size) // still eroor
+			break ;
+		else
+			std::cout << "Invalid Index !!" << std::endl;
+	}
+	std::cout << "First Name: " << arr[idex].get_fname() << std::endl;
+	std::cout << "Last Name: " << arr[idex].get_lname() << std::endl;
+	std::cout << "Nick Name: " << arr[idex].get_nname() << std::endl;
+	std::cout << "Phone Number: " << arr[idex].get_pnumber() << std::endl;
+	std::cout << "Darkest Secret: " << arr[idex].get_dsecret() << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:53:55 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/15 11:08:53 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/19 17:44:47 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ std::string Contact::get_nname(void)
 {
 	return (Nick_Name);
 }
-
 std::string Contact::get_pnumber(void)
 {
 	return (Phone_Number);

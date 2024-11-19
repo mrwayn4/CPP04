@@ -6,13 +6,14 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:38 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/15 10:00:32 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/19 15:57:21 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Contact.hpp"
 #include <iostream>
+#include <iomanip>
 
 class PhoneBook
 {
@@ -25,4 +26,5 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		void	add();
+		void	search();
 };

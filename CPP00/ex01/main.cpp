@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:00 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/15 11:26:19 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/19 17:34:36 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int main ()
 			break ;
 		if (s == "ADD")
 			pb.add();
-		// else if (s == "SEARCH")
-		// 	pb.search();
+		else if (s == "SEARCH")
+			pb.search();
 		if (std::cin.eof())
 		{
 			std::cout << std::endl;
