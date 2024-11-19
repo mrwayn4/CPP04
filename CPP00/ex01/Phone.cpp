@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:03 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/19 20:59:19 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/19 21:40:25 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,21 +169,23 @@ void	PhoneBook::search()
 		i++;
 	}
 	std::string id;
-	int idex = s_to_i(id);
-	while (true)
+	std::cout << "Select Index: ";
+	std::getline(std::cin, id);
+	if (std::cin.eof())
+		return ;
+	if (id.empty() || !ft_isdigit(id) || s_to_i(id) >= size)
 	{
-		std::cout << "Select Index: ";
-		std::getline(std::cin, id);
-		if (std::cin.eof())
-			return ;
-		if (!id.empty() && idex <= size) // still eroor
-			break ;
-		else
-			std::cout << "Invalid Index !!" << std::endl;
+		std::cout << id;
+		std::cout << size;
+		std::cout << "Invalid Index !!" << std::endl;
 	}
-	std::cout << "First Name: " << arr[idex].get_fname() << std::endl;
-	std::cout << "Last Name: " << arr[idex].get_lname() << std::endl;
-	std::cout << "Nick Name: " << arr[idex].get_nname() << std::endl;
-	std::cout << "Phone Number: " << arr[idex].get_pnumber() << std::endl;
-	std::cout << "Darkest Secret: " << arr[idex].get_dsecret() << std::endl;
+	else
+	{
+		int idex = s_to_i(id);
+		std::cout << "First Name: " << arr[idex].get_fname() << std::endl;
+		std::cout << "Last Name: " << arr[idex].get_lname() << std::endl;
+		std::cout << "Nick Name: " << arr[idex].get_nname() << std::endl;
+		std::cout << "Phone Number: " << arr[idex].get_pnumber() << std::endl;
+		std::cout << "Darkest Secret: " << arr[idex].get_dsecret() << std::endl;
+	}
 }
