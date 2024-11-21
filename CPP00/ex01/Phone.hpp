@@ -6,11 +6,13 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:38 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/19 15:57:21 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/22 00:15:07 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+
 #include "Contact.hpp"
 #include <iostream>
 #include <iomanip>
@@ -28,3 +30,4 @@ class PhoneBook
 		void	add();
 		void	search();
 };
+#endif

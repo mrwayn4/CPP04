@@ -6,11 +6,12 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:35 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/19 17:44:07 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/22 00:15:25 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 #include <iostream>
 
 class Contact
@@ -36,3 +37,4 @@ class Contact
 		void set_pnumber(std::string s);
 		void set_dsecret(std::string s);
 };
+#endif
