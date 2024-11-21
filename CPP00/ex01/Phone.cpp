@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:03 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/19 21:40:25 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/21 19:04:07 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int	s_to_i(std::string s)
 	if (s[1])
 		n += s[1] - '0';
 	return (n);
-
 }
 
 int	ft_isdigit(std::string c)
@@ -173,12 +172,8 @@ void	PhoneBook::search()
 	std::getline(std::cin, id);
 	if (std::cin.eof())
 		return ;
-	if (id.empty() || !ft_isdigit(id) || s_to_i(id) >= size)
-	{
-		std::cout << id;
-		std::cout << size;
+	if (id.empty() || !ft_isdigit(id) || s_to_i(id) >= size || s_to_i(id) < 0)
 		std::cout << "Invalid Index !!" << std::endl;
-	}
 	else
 	{
 		int idex = s_to_i(id);
