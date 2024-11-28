@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 15:54:17 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/26 09:41:48 by ibouram          ###   ########.fr       */
+/*   Created: 2024/11/26 09:10:10 by ibouram           #+#    #+#             */
+/*   Updated: 2024/11/26 09:57:48 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name )
+int main()
 {
-	Zombie *zombie;
-	zombie = new Zombie;
-	zombie->set_name(name);
-	return (zombie);
+	int N = 5;
+	Zombie* Z = zombieHorde(N, "IDDER");
+	for (int i = 0; i < N; i++)
+		Z[i].announce();
+	delete[] Z;
 }

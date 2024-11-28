@@ -5,24 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/24 22:14:36 by ibouram           #+#    #+#              #
-#    Updated: 2024/11/26 09:13:11 by ibouram          ###   ########.fr        #
+#    Created: 2024/11/27 10:43:12 by ibouram           #+#    #+#              #
+#    Updated: 2024/11/27 10:57:47 by ibouram          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp
 RM = rm -f
-NAME = Zombie
+NAME = Sed
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INCLUDE = Zombie.hpp
 
 SRCO = $(SRC:.cpp=.o)
 
 all: $(NAME)
 $(NAME): $(SRCO)
 	$(CC) $(FLAGS) $^ -o $@
-%.o: %.cpp $(INCLUDE)
+%.o: %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 clean:
 	$(RM) $(SRCO)

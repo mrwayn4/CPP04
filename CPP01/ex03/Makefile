@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/24 22:14:36 by ibouram           #+#    #+#              #
-#    Updated: 2024/11/26 09:13:11 by ibouram          ###   ########.fr        #
+#    Created: 2024/11/26 10:29:55 by ibouram           #+#    #+#              #
+#    Updated: 2024/11/26 10:32:16 by ibouram          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp  Weapon.cpp HumanA.cpp HumanB.cpp
 RM = rm -f
-NAME = Zombie
+NAME = Violence
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INCLUDE = Zombie.hpp
+INCLUDE = Weapon.hpp  HumanA.hpp  HumanB.hpp
 
 SRCO = $(SRC:.cpp=.o)
 

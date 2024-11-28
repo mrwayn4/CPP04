@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/24 22:14:36 by ibouram           #+#    #+#              #
-#    Updated: 2024/11/26 09:13:11 by ibouram          ###   ########.fr        #
+#    Created: 2024/11/26 09:07:33 by ibouram           #+#    #+#              #
+#    Updated: 2024/11/26 09:13:20 by ibouram          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp zombieHorde.cpp Zombie.cpp
 RM = rm -f
 NAME = Zombie
 CC = c++
