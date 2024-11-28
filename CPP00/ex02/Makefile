@@ -6,7 +6,7 @@
 #    By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 21:44:19 by ibouram           #+#    #+#              #
-#    Updated: 2024/11/21 23:57:19 by ibouram          ###   ########.fr        #
+#    Updated: 2024/11/26 09:12:50 by ibouram          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCO = $(SRC:.cpp=.o)
 all: $(NAME)
 $(NAME): $(SRCO)
 	$(CC) $(FLAGS) $^ -o $@
-%.o: %.c .cpp $(INCLUDE)
+%.o: %.cpp $(INCLUDE)
 	$(CC) $(FLAGS) -c $< -o $@
 clean:
 	$(RM) $(SRCO)
