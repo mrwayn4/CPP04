@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 17:13:59 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/28 17:41:56 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/11/29 09:56:41 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 class Harl
 {
 	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 
 	public:
-		void complain( std::string level );
+		void complain(std::string level);
 };
 
 #endif
