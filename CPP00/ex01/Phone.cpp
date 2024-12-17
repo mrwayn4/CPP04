@@ -6,12 +6,13 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:03 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/21 19:04:07 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/12/17 17:20:45 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phone.hpp"
 #include "Contact.hpp"
+#include <cstdlib>
 
 int	ft_isprint(std::string c)
 {
@@ -42,16 +43,6 @@ int	ft_isalpha(std::string s)
 		i++;
 	}
 	return (0);
-}
-
-int	s_to_i(std::string s)
-{
-	int n = 10;
-	if (s[0])
-		n = s[0] - '0';
-	if (s[1])
-		n += s[1] - '0';
-	return (n);
 }
 
 int	ft_isdigit(std::string c)
@@ -172,11 +163,11 @@ void	PhoneBook::search()
 	std::getline(std::cin, id);
 	if (std::cin.eof())
 		return ;
-	if (id.empty() || !ft_isdigit(id) || s_to_i(id) >= size || s_to_i(id) < 0)
+	if (id.empty() || !ft_isdigit(id) || atoi(id.c_str()) >= size || atoi(id.c_str()) < 0)
 		std::cout << "Invalid Index !!" << std::endl;
 	else
 	{
-		int idex = s_to_i(id);
+		int idex = atoi(id.c_str());
 		std::cout << "First Name: " << arr[idex].get_fname() << std::endl;
 		std::cout << "Last Name: " << arr[idex].get_lname() << std::endl;
 		std::cout << "Nick Name: " << arr[idex].get_nname() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:54:35 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/22 00:15:25 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/12/17 15:35:03 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 
 class Contact
 {
-	std::string First_Name;
-	std::string Last_Name;
-	std::string Nick_Name;
-	std::string Phone_Number;
-	std::string Darkest_Secret;
+	private:
+		std::string First_Name;
+		std::string Last_Name;
+		std::string Nick_Name;
+		std::string Phone_Number;
+		std::string Darkest_Secret;
 
 	public:
 		Contact();

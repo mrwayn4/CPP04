@@ -12,13 +12,6 @@
 
 #include "Contact.hpp"
 #include "Phone.hpp"
-// check non printbale characters
-// void	add()
-// {
-	
-// }
-
-
 
 int main ()
 {
