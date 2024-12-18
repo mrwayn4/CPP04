@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:44:17 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/27 09:54:03 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/12/18 10:33:00 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ const std::string& Weapon::getType()
 
 void	Weapon::setType(std::string s)
 {
-	s = type;
+	type = s;
 }

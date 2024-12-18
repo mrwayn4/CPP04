@@ -6,7 +6,7 @@
 /*   By: ibouram <ibouram@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:18:41 by ibouram           #+#    #+#             */
-/*   Updated: 2024/11/27 10:40:20 by ibouram          ###   ########.fr       */
+/*   Updated: 2024/12/01 18:12:49 by ibouram          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 HumanB::HumanB(std::string name)
 {
 	this->name = name;
+	this->my_weapon = NULL;
 }
 HumanB::~HumanB()
 {
